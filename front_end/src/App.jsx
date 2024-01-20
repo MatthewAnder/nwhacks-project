@@ -5,11 +5,13 @@ import TimeInput from './components/TimeInput'
 import CapacityInput from './components/CapacityInput'
 import PopUp from './components/PopUp'
 
+import Map from './components/Map'
+
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
+      <Map />
       <div class="form">
         <PopUp/>
       </div>
