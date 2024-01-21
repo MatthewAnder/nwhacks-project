@@ -48,7 +48,7 @@ function HomePageCards() {
           </Text>
         </CardBody>
         <CardFooter>
-          <Link to="center" href="/map" id="map">
+          <Link to="/map" id="map">
             <Button size="lg" color="teal">
               View here
             </Button>
