@@ -13,7 +13,7 @@ import {
   FormLabel,
 } from "@chakra-ui/react";
 
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useContext } from "react";
 
 import { useForm } from "react-hook-form";
 
@@ -48,18 +48,26 @@ const PopoverForm = () => {
 
 
   const onSubmit = (data) => {
-    console.log(data);
+    setValues(values => ({...values, data}))
   };
 
-  const sport = watch('sport');
-  const time = watch('time');
+  // const sport = watch('sport');
+  // const time = watch('time');
+  // const capacity = watch('capacity');
+  // const location = watch('location')
 
-  useEffect(() => {
-    setValues(values => ({...values, sport}))
-  }, [sport])
-  useEffect(() => {
-    setValues(values => ({...values, time}))
-  }, [time])
+  // useEffect(() => {
+  //   setValues(values => ({...values, sport}))
+  // }, [sport])
+  // useEffect(() => {
+  //   setValues(values => ({...values, time}))
+  // }, [time])
+  // useEffect(() => {
+  //   setValues(values => ({...values, capacity}))
+  // }, [capacity])
+  // useEffect(() => {
+  //   setValues(values => ({...values, location}))
+  // }, [location])
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
