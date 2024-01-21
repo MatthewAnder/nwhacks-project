@@ -3,6 +3,7 @@ import Title from "../components/Title";
 import logo from "../assets/pickup.png";
 import Navbar from "../components/Navbar";
 import HomePageCards from "../components/HomePageCards";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
