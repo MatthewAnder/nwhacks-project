@@ -13,7 +13,6 @@ return(
             <option value='option3'>Volleyball</option>
         </Select>
     </>
-)
-}
+)}
 
 export default SportDropDown
