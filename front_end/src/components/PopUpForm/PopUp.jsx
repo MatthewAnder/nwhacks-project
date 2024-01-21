@@ -22,7 +22,7 @@ function PopUp() {
   return (
     <Popover>
       <PopoverTrigger>
-        <Button color="teal" p={6}>Create Event</Button>
+        <Button color="white" bgColor="teal" _hover={{background: "teal.500"}} p={6}>Create Event</Button>
       </PopoverTrigger>
 
       <PopoverContent>

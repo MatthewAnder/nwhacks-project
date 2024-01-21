@@ -71,7 +71,7 @@ function Map() {
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={17}
+      zoom={15}
       onLoad={onLoad}
       onUnmount={onUnmount}
       options={{
@@ -95,23 +95,21 @@ function Map() {
               {/* {(mapData.location == values.location) ?
               mapData.listOfEvents.push(values) :
               "hi"} */}
-
-              {/* Drawer */}
-              <Drawer onClose={onClose} isOpen={isOpen} size="lg">
-                <DrawerOverlay />
-                <DrawerContent>
-                  <DrawerCloseButton />
-                  <DrawerHeader>Events</DrawerHeader>
-                  <DrawerBody>
-                    {mapData.listOfEvents.map((event) => {
-                      return <CardExample value={event} />;
-                    })}
-                  </DrawerBody>
-                </DrawerContent>
-              </Drawer>
             </>
           );
         })}
+        {/* Drawer */}
+        <Drawer onClose={onClose} isOpen={isOpen} size="lg">
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerCloseButton />
+            <DrawerHeader>Events</DrawerHeader>
+            <DrawerBody>
+              <CardExample />
+              <CardExample />
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
       </>
     </GoogleMap>
   ) : (
@@ -119,29 +117,24 @@ function Map() {
   );
 }
 
-const CardExample = ({ value }) => {
+const CardExample = () => {
   return (
     // for each loop here; card example should receive props the data
     <Card margin={5}>
       <CardBody>
-        <Image
-          src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-          alt="Green double couch with wooden legs"
-          borderRadius="lg"
-        />
         <Stack mt="6" spacing="3">
-          <Heading size="md">Pickup Playhouse {value.sport}</Heading>
+          <Heading size="md">Pickup Playhouse</Heading>
           <Text>
             This sofa is perfect for modern tropical spaces, baroque inspired
             spaces, earthy toned spaces and for people who love a chic design
-            with a sprinkle of vintage design. (Description of value)
+            with a sprinkle of vintage design.
           </Text>
           <Text color="teal.400">
-            Time: {value.time}
+            Time: 12 : 00
             <br></br>
-            Location: {value.location}
+            Location: UBC Rec Centre
             <br></br>
-            Capacity: 0 / {value.capacity}
+            Capacity: 0 / 20
           </Text>
         </Stack>
       </CardBody>

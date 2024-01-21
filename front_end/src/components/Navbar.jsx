@@ -6,12 +6,12 @@ function Navbar() {
   return (
     <div className="navbar">
       <Link to="/" id="profileNav">
-        <Button color="teal" p={6}>Home</Button>
+      <Button color="white" bgColor="teal" _hover={{background: "teal.500"}} p={6}>Home</Button>
       </Link>
       <PopUp id="popUpNav" />
 
       <Link to="/map" id="mapNav">
-        <Button color="teal" p={6}>Map</Button>
+        <Button color="white" bgColor="teal" _hover={{background: "teal.500"}} p={6}>Map</Button>
       </Link>
     </div>
   );
