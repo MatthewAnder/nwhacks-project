@@ -1,17 +1,18 @@
 import { Button } from "@chakra-ui/react";
 import PopUp from "./PopUpForm/PopUp";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <div className="navbar">
-      <a href="/" id="profileNav">
+      <Link to="/" id="profileNav">
         <Button color="teal" p={6}>Home</Button>
-      </a>
+      </Link>
       <PopUp id="popUpNav" />
 
-      <a href="/map" id="mapNav">
+      <Link to="/map" id="mapNav">
         <Button color="teal" p={6}>Map</Button>
-      </a>
+      </Link>
     </div>
   );
 }
