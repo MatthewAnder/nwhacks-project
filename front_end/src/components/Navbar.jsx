@@ -1,23 +1,19 @@
-import { Button, Link } from "@chakra-ui/react"
-import PopUp from "./PopUpForm/PopUp"
-import logo from "../assets/pickup.png"
+import { Button } from "@chakra-ui/react";
+import PopUp from "./PopUpForm/PopUp";
 
+function Navbar() {
+  return (
+    <div className="navbar">
+      <a href="/" id="profileNav">
+        <Button color="teal" p={6}>Home</Button>
+      </a>
+      <PopUp id="popUpNav" />
 
-function Navbar(){
-    return(
-        <>
-            <div className ="navbar">
-                <a href="/map" id="mapNav">
-                    <Button>Map</Button>
-                </a>
-                <PopUp id="popUpNav"/>
-                <a href="/" id="profileNav">
-                    <Button>Home</Button>
-                </a>
-            </div>
-            <p></p>
-        </>
-    )
+      <a href="/map" id="mapNav">
+        <Button color="teal" p={6}>Map</Button>
+      </a>
+    </div>
+  );
 }
 
-export default Navbar
+export default Navbar;

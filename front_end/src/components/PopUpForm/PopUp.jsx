@@ -13,15 +13,16 @@ import {
   FormLabel,
 } from "@chakra-ui/react";
 
-import { useState } from "react";
+import { useEffect, useState, useContext } from "react";
 
 import { useForm } from "react-hook-form";
 
+import { valueContext } from '../context'
 function PopUp() {
   return (
     <Popover>
       <PopoverTrigger>
-        <Button>Create Event</Button>
+        <Button color="teal" p={6}>Create Event</Button>
       </PopoverTrigger>
 
       <PopoverContent>
@@ -40,12 +41,25 @@ const PopoverForm = () => {
     register,
     handleSubmit,
     formState: { errors },
+    watch
   } = useForm();
+
+  const {setValues} = useContext(valueContext);
 
 
   const onSubmit = (data) => {
     console.log(data);
   };
+
+  const sport = watch('sport');
+  const time = watch('time');
+
+  useEffect(() => {
+    setValues(values => ({...values, sport}))
+  }, [sport])
+  useEffect(() => {
+    setValues(values => ({...values, time}))
+  }, [time])
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -96,7 +110,7 @@ const PopoverForm = () => {
               Student Recreation Centre
             </option>
             <option value="out_basketball_court">
-              North Outdooer Basketball Court
+              North Outdoor Basketball Court
             </option>
           </Select>
         </body>
@@ -104,7 +118,7 @@ const PopoverForm = () => {
 
       <PopoverFooter>
         <div className="popUpFooter">
-          <Button bg="cyan.400" color="white" type="submit">
+          <Button bg="teal" color="white" type="submit">
             Confirm
           </Button>
         </div>

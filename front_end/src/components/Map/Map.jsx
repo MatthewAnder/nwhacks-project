@@ -7,9 +7,10 @@ import {
 } from "@react-google-maps/api";
 
 import { InfoWindow } from "@react-google-maps/api";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { mapStyle } from "./mapTheme.js";
 import { mapDatas } from "./mapData.js";
+import { valueContext } from "../context.js";
 
 const containerStyle = {
   width: "100vw",
@@ -41,6 +42,9 @@ function Map() {
   const handleMarkerClick = (marker) => {
     setSelectedMarker(marker);
   };
+
+  const {values} = useContext(valueContext)
+  console.log(values)
 
   return isLoaded ? (
     <GoogleMap
