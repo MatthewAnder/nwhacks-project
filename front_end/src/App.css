@@ -13,6 +13,14 @@
   padding: 20px;
 }
 
+.homeBackground {
+  background-image: url("./assets/waves.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;  /* Set the height to cover the entire viewport */
+  /* Add more styles as needed */
+}
+
 .page {
   flex: auto;
   flex-direction: row;
@@ -25,12 +33,13 @@
   position: absolute;
   top: 0;
   right: 0;
-  padding: 20px;
+  padding: 2em;
   align-items: center;
 }
 
 #mapNav {
   margin: 15px;
+  color: teal;
 }
 
 #popupNav {
@@ -93,4 +102,8 @@
 
 .Feature {
   border-radius: 25px;
+}
+
+.titled {
+  font-weight: bold;
 }

@@ -21,7 +21,7 @@ function PopUp() {
   return (
     <Popover>
       <PopoverTrigger>
-        <Button>Create Event</Button>
+        <Button color="teal" p={6}>Create Event</Button>
       </PopoverTrigger>
 
       <PopoverContent>
@@ -96,7 +96,7 @@ const PopoverForm = () => {
               Student Recreation Centre
             </option>
             <option value="out_basketball_court">
-              North Outdooer Basketball Court
+              North Outdoor Basketball Court
             </option>
           </Select>
         </body>
@@ -104,7 +104,7 @@ const PopoverForm = () => {
 
       <PopoverFooter>
         <div className="popUpFooter">
-          <Button bg="cyan.400" color="white" type="submit">
+          <Button bg="teal" color="white" type="submit">
             Confirm
           </Button>
         </div>
