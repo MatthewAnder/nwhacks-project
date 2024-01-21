@@ -3,6 +3,7 @@ import { SimpleGrid } from "@chakra-ui/react";
 import { Heading } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 function HomePageCards() {
   return (
@@ -47,11 +48,11 @@ function HomePageCards() {
           </Text>
         </CardBody>
         <CardFooter>
-          <a href="/map" id="map">
+          <Link to="/map" id="map">
             <Button size="lg" color="teal">
               View here
             </Button>
-          </a>
+          </Link>
         </CardFooter>
       </Card>
 
