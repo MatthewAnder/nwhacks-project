@@ -1,11 +1,9 @@
-import { useState } from 'react'
-import './App.css'
-import SportDropDown from './components/SportDropDown.jsx'
-import TimeInput from './components/TimeInput'
-import CapacityInput from './components/CapacityInput'
-import PopUp from './components/PopUp'
 
-import Map from './components/Map/Map.jsx'
+import './App.css'
+
+
+import Map from './components/Map/Map'
+import Navbar from './components/Navbar'
 
 function App() {
 
@@ -13,7 +11,7 @@ function App() {
     <>
       <Map />
       <div class="form">
-        <PopUp/>
+        <Navbar/>
       </div>
     </>
   )

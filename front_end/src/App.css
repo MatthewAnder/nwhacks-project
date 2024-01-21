@@ -11,9 +11,34 @@
   padding: 20px;
 }
 
-.form {
+.page {
   flex: auto;
-  flex-direction: column;
-  margin: 30px;
+  flex-direction: row;
+}
+
+.navbar {
+  flex: auto;
+  flex-direction: row;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
   padding: 20px;
+  align-items: center;
+}
+
+#mapNav {
+  margin: 15px;
+}
+
+#popupNav {
+  margin: 15px;
+}
+
+#profileNav {
+  margin: 15px;
+}
+
+#logoNav {
+  size-adjust: 90%;
 }
