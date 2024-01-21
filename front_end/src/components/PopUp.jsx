@@ -26,18 +26,15 @@ import {
             <PopoverArrow />
             <PopoverCloseButton />
             <PopoverHeader>Sport Creation Menu</PopoverHeader>
-            <PopoverBody>
-                <div class="popUpHeader">
-
-                </div>
-                <div class="popUpFill">
+            <PopoverBody padding={4}>
+                <div className="popUpFill">
                     <SportDropDown/>
                     <TimeInput/>
                     <CapacityInput/>
                 </div>
             </PopoverBody>
             <PopoverFooter>
-                <div class = "popUpFooter">
+                <div className = "popUpFooter">
                     <Button colorScheme='blue'>Confirm</Button>
                 </div>
             </PopoverFooter>

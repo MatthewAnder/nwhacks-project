@@ -12,13 +12,13 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "map",
+    path: "/map",
     element: <ChakraProvider>
       <App/>
     </ChakraProvider>,
   },
   {
-    path: "profile",
+    path: "/profile",
     element: <ChakraProvider>
       <Profile/>
     </ChakraProvider>,
