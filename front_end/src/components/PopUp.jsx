@@ -14,6 +14,7 @@ import {
   import SportDropDown from './SportDropDown'
   import TimeInput from './TimeInput'
   import CapacityInput from './CapacityInput'
+  import Location from './Location'
 
 
   function PopUp(){
@@ -34,6 +35,7 @@ import {
                     <SportDropDown/>
                     <TimeInput/>
                     <CapacityInput/>
+                    <Location/>
                 </div>
             </PopoverBody>
             <PopoverFooter>
