@@ -6,7 +6,7 @@ import logo from "../assets/pickup..png"
 function Navbar(){
     return(
         <>
-            <div class ="navbar">
+            <div className ="navbar">
                 <a href="/map" id="mapNav">
                     <Button>Map</Button>
                 </a>
