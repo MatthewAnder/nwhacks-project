@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .header {
@@ -41,4 +43,34 @@
 
 #logoNav {
   size-adjust: 90%;
+}
+
+.header {
+  height: 20vh;
+}
+
+.halfCenter {
+  width: 40vh;
+  display: inline-block;
+}
+
+.titled {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  font-size: 50px;
+}
+
+.paragraphed {
+  padding-bottom: 10vh;
+  font-size: 25px;
+}
+
+.titleParaPair {
+  width: 33vw;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-bottom: 50px;
 }

@@ -14,7 +14,6 @@ function Navbar(){
                 <a href="/Profile" id="profileNav">
                     <Button>Profile</Button>
                 </a>
-                
             </div>
             <p></p>
         </>

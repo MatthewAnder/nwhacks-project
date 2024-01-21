@@ -1,13 +1,30 @@
 import Navbar from '../components/Navbar'
+import SportDropDown from '../components/SportDropDown'
+import TimeInput from '../components/TimeInput'
+import CapacityInput from '../components/CapacityInput'
 
 function Profile(){
     return(
-        <>
-      <div class="page">
-        <Navbar/>
-      </div>
-      <h1>Profile</h1>
-    </>
+      <>
+        <header>
+          <div class="page header">
+            <Navbar/>
+            <img src={"../assets/pickup..png"} alt="Logo"></img>
+          </div>
+        </header>
+        <body>
+          <div className="page">
+            <div class="halfCenter">
+              <h2 class = "margin">
+                Set Default
+              </h2>
+              <SportDropDown/>
+              <TimeInput/>
+              <CapacityInput/>
+            </div>
+          </div>
+        </body>
+      </>
     )
 }
 
