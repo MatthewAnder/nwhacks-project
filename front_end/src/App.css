@@ -54,10 +54,14 @@
   display: inline-block;
 }
 
+.largeTitled {
+  font-size: 100px;
+}
+
 .titled {
   padding-top: 5vh;
   padding-bottom: 5vh;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .paragraphed {

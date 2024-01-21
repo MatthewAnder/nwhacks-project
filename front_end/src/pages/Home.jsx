@@ -1,9 +1,6 @@
 import { Button } from "@chakra-ui/react"
 import Title from "../components/Title"
-import Paragraph from "../components/Paragraph"
 import Feature from "../components/Feature"
-import { Input } from '@chakra-ui/react'
-
   
 
 function Home(){
@@ -11,15 +8,15 @@ function Home(){
     return(
         <>
             <div>
+                <Title title = "Pickup.." class = "largeTitled"/>
+                <Title title = "Find the best time and place for your sports!" class = "titled"/>
+                <div class="gallery">
+                    <Feature title="Schedule Events" paragraph="Schedule and host sports games to be able to play anytime and anywhere!" color="grey"/>
+                    <Feature title="Find Locations" paragraph="Find the best places to play your favorite sports on campus!" color="lightgrey"/>
+                    <Feature title="Play Easier" paragraph="Pickup makes it easier for you to worry less about planning games and focus more on having fun." color="grey"/>
+                </div>
                 <a href="/map" id="map">
-                    <Title title = "Pickup.."/>
-                    <Paragraph paragraph = "Find the best time and place for your sports!"/>
-                    <div class="gallery">
-                        <Feature title="Point1" paragraph="Explanation"/>
-                        <Feature title="Point2" paragraph="Explanation"/>
-                        <Feature title="Point3" paragraph="Explanation"/>
-                    </div>
-                    <Button size='lg'>Button</Button>
+                    <Button size='lg'>Map</Button>
                 </a>
             </div>
         </>
