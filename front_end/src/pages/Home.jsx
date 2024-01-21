@@ -13,12 +13,12 @@ function Home() {
       </div>
       
       <div>
-        <img class="img" src={logo} alt="Logo" />
+        <img className="img" src={logo} alt="Logo" />
         <Title
           title="Find the best court and time for your sports!"
-          class="titled"
+          className="titled"
         />
-        <div class="gallery"></div>
+        <div className="gallery"></div>
       </div>
       <div>
         <HomePageCards />

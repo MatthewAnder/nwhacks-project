@@ -13,7 +13,7 @@ import {
   FormLabel,
 } from "@chakra-ui/react";
 
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useContext } from "react";
 
 import { useForm } from "react-hook-form";
 
@@ -47,19 +47,35 @@ const PopoverForm = () => {
   const {setValues} = useContext(valueContext);
 
 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  // const onSubmit = (data) => {
+  //   setValues(values => ({...values, data}))
+  // };
 
   const sport = watch('sport');
   const time = watch('time');
+  const capacity = watch('capacity');
+  const location = watch('location');
 
-  useEffect(() => {
+  const onSubmit = () => {
     setValues(values => ({...values, sport}))
-  }, [sport])
-  useEffect(() => {
     setValues(values => ({...values, time}))
-  }, [time])
+    setValues(values => ({...values, capacity}))
+    setValues(values => ({...values, location}))
+  }
+
+
+  // useEffect(() => {
+  //   setValues(values => ({...values, sport}))
+  // }, [sport])
+  // useEffect(() => {
+  //   setValues(values => ({...values, time}))
+  // }, [time])
+  // useEffect(() => {
+  //   setValues(values => ({...values, capacity}))
+  // }, [capacity])
+  // useEffect(() => {
+  //   setValues(values => ({...values, location}))
+  // }, [location])
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -105,11 +121,11 @@ const PopoverForm = () => {
             {...register("location", { required: true })}
           >
             <option value="Tennis Centre">UBC Tennis Centre</option>
-            <option value="tb_park">Thunderbird Park</option>
-            <option value="student_rec_centre">
+            <option value="Thunderbird Park">Thunderbird Park</option>
+            <option value="Student Rec Centre">
               Student Recreation Centre
             </option>
-            <option value="out_basketball_court">
+            <option value="Totem Park Basketball Court">
               North Outdoor Basketball Court
             </option>
           </Select>

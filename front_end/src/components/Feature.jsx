@@ -6,8 +6,8 @@ import { Box } from "@chakra-ui/react";
 function Feature(props) {
   return (
     <Box bg={props.color}>
-      <div class="titleParaPair">
-        <Title title={props.title} class="titled" />
+      <div className="titleParaPair">
+        <Title title={props.title} className="titled" />
         <Paragraph paragraph={props.paragraph} />
       </div>
     </Box>

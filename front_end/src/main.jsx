@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   {
     path: "/map",
     element: <ChakraProvider>
-      <App/>
+      <App />
     </ChakraProvider>,
   },
 ]);
