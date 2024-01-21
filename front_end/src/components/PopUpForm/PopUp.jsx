@@ -47,14 +47,22 @@ const PopoverForm = () => {
   const {setValues} = useContext(valueContext);
 
 
-  const onSubmit = (data) => {
-    setValues(values => ({...values, data}))
-  };
+  // const onSubmit = (data) => {
+  //   setValues(values => ({...values, data}))
+  // };
 
-  // const sport = watch('sport');
-  // const time = watch('time');
-  // const capacity = watch('capacity');
-  // const location = watch('location')
+  const sport = watch('sport');
+  const time = watch('time');
+  const capacity = watch('capacity');
+  const location = watch('location');
+
+  const onSubmit = () => {
+    setValues(values => ({...values, sport}))
+    setValues(values => ({...values, time}))
+    setValues(values => ({...values, capacity}))
+    setValues(values => ({...values, location}))
+  }
+
 
   // useEffect(() => {
   //   setValues(values => ({...values, sport}))
@@ -113,11 +121,11 @@ const PopoverForm = () => {
             {...register("location", { required: true })}
           >
             <option value="Tennis Centre">UBC Tennis Centre</option>
-            <option value="tb_park">Thunderbird Park</option>
-            <option value="student_rec_centre">
+            <option value="Thunderbird Park">Thunderbird Park</option>
+            <option value="Student Rec Centre">
               Student Recreation Centre
             </option>
-            <option value="out_basketball_court">
+            <option value="Totem Park Basketball Court">
               North Outdoor Basketball Court
             </option>
           </Select>

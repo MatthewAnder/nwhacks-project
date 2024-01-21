@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
 import {
@@ -18,7 +18,7 @@ import {
   Stack,
   Heading,
   Text,
-  Image
+  Image,
 } from "@chakra-ui/react";
 
 import { useState, useContext } from "react";
@@ -82,23 +82,34 @@ function Map() {
       {/* Child components, such as markers, info windows, etc. */}
       <>
         {mapDatas.map((mapData, index) => {
-          console.log(mapData.location.lng);
-
           return (
-            <Marker
-              key={index}
-              position={mapData.location}
-              icon={mapData.imageSrc}
-              onClick={() => handleMarkerClick(mapData)}
-              animation={google.maps.Animation.DROP}
-            />
+            <>
+              <Marker
+                key={index}
+                position={mapData.location}
+                icon={mapData.imageSrc}
+                onClick={() => handleMarkerClick(mapData)}
+                animation={google.maps.Animation.DROP}
+              />
+
+              
+            </>
           );
         })}
 
-        {/* Window */}
+        {/* Drawer */}
         <Drawer onClose={onClose} isOpen={isOpen} size="lg">
-          <DrawerBodyContent />
-        </Drawer>
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerHeader>Events</DrawerHeader>
+          <DrawerBody>
+            {mapDatas.map((event) => {
+              <CardExample value={event.listOfEvents} />;
+            })}
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
       </>
     </GoogleMap>
   ) : (
@@ -106,10 +117,10 @@ function Map() {
   );
 }
 
-const CardExample = () => {
+const CardExample = ({ value }) => {
   return (
     // for each loop here; card example should receive props the data
-    <Card>
+    <Card margin={5}>
       <CardBody>
         <Image
           src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
@@ -117,40 +128,26 @@ const CardExample = () => {
           borderRadius="lg"
         />
         <Stack mt="6" spacing="3">
-          <Heading size="md">Living room Sofa</Heading>
+          <Heading size="md">Pickup Playhouse {value.sport}</Heading>
           <Text>
             This sofa is perfect for modern tropical spaces, baroque inspired
             spaces, earthy toned spaces and for people who love a chic design
-            with a sprinkle of vintage design.
+            with a sprinkle of vintage design. (Description of value)
           </Text>
-          <Text color="blue.600" >
-            $450
+          <Text color="teal.400">
+            Time: {value.time}
+            <br></br>
+            Capacity: 0 / {value.capacity}
           </Text>
         </Stack>
       </CardBody>
       <Divider />
       <CardFooter>
         <Button variant="solid" colorScheme="teal">
-          Buy now
+          Join now
         </Button>
       </CardFooter>
     </Card>
-  );
-};
-
-const DrawerBodyContent = () => {
-  return (
-    <>
-      <DrawerOverlay />
-      <DrawerContent>
-        <DrawerCloseButton />
-        <DrawerHeader>Events</DrawerHeader>
-        <DrawerBody>
-          <CardExample />
-          <CardExample />
-        </DrawerBody>
-      </DrawerContent>
-    </>
   );
 };
 
