@@ -7,6 +7,10 @@ import {
 } from "@react-google-maps/api";
 
 import { mapStyle } from "./mapTheme.js";
+import { mapDatas } from "./mapData.js";
+
+
+
 
 const containerStyle = {
   width: "100vw",
@@ -27,10 +31,6 @@ function Map() {
   const [map, setMap] = React.useState(null);
 
   const onLoad = React.useCallback(function callback(map) {
-    // This is just an example of getting and using the map instance!!! don't just blindly copy!
-    const bounds = new window.google.maps.LatLngBounds(center);
-    map.fitBounds(bounds);
-
     setMap(map);
   }, []);
 
@@ -42,7 +42,7 @@ function Map() {
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={5}
+      zoom={17}
       onLoad={onLoad}
       onUnmount={onUnmount}
       options={{
@@ -53,28 +53,17 @@ function Map() {
     >
       {/* Child components, such as markers, info windows, etc. */}
       <>
-        {/* <Marker position={{ lat: 49.257, lng: -123.251 }} /> */}
+        {mapDatas.map((mapData) => {
+          console.log(mapData.location.lng);
+          
+          return <Marker position={mapData.location} icon={mapData.imageSrc} />
 
-        <InfoBox
-          position={{ lat: 49.257, lng: -123.251 }}
-          options={{ closeBoxURL: ``, enableEventPropagation: true }}
-        >
-          <div
-            style={{
-              backgroundColor: `yellow`,
-              opacity: 0.75,
-              padding: `12px`,
-            }}
-          >
-            <div style={{ fontSize: `16px`, fontColor: `#08233B` }}>
-              Hello, Taipei!aa
-            </div>
-          </div>
-        </InfoBox>
+          //return <Marker position={mapData.location} icon={`${mapData.type}` + Marker} />;
+        })}
       </>
     </GoogleMap>
   ) : (
-    <>Map is not working!</>
+    <></>
   );
 }
 

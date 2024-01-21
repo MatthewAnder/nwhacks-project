@@ -27,10 +27,7 @@ import {
             <PopoverArrow />
             <PopoverCloseButton />
             <PopoverHeader>Sport Creation Menu</PopoverHeader>
-            <PopoverBody>
-                <div className="popUpHeader">
-
-                </div>
+            <PopoverBody padding={4}>
                 <div className="popUpFill">
                     <SportDropDown/>
                     <TimeInput/>
