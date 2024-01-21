@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar'
-import SportDropDown from '../components/SportDropDown'
-import TimeInput from '../components/TimeInput'
-import CapacityInput from '../components/CapacityInput'
+import SportDropDown from '../components/PopUpForm/SportDropDown'
+import TimeInput from '../components/PopUpForm/TimeInput'
+import CapacityInput from '../components/PopUpForm/CapacityInput'
 
 function Profile(){
     return(

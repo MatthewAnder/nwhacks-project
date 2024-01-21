@@ -56,10 +56,11 @@ function Map() {
         {mapDatas.map((mapData) => {
           console.log(mapData.location.lng);
           
-          return <Marker position={mapData.location} icon={mapData.imageSrc} />
+          return <Marker position={mapData.location} icon={mapData.imageSrc} animation={google.maps.Animation.DROP} />
 
           //return <Marker position={mapData.location} icon={`${mapData.type}` + Marker} />;
         })}
+
       </>
     </GoogleMap>
   ) : (

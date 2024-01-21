@@ -1,5 +1,5 @@
 import { Button, Link } from "@chakra-ui/react"
-import PopUp from "./PopUp"
+import PopUp from "./PopUpForm/PopUp"
 import logo from "../assets/pickup..png"
 
 

@@ -74,3 +74,9 @@
   grid-template-columns: 1fr 1fr 1fr;
   padding-bottom: 50px;
 }
+
+
+.errorMsg {
+  color: red;
+  text-align: left;
+}
