@@ -56,8 +56,8 @@
 
 .titled {
   padding-top: 5vh;
-  padding-bottom: 5vh;
-  font-size: 50px;
+  padding-bottom: 4vh;
+  font-size: 40px;
 }
 
 .paragraphed {
@@ -79,4 +79,18 @@
 .errorMsg {
   color: red;
   text-align: left;
+}
+
+.img {
+  display: block;
+  margin: auto;
+  text-align: center;
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.Feature {
+  border-radius: 25px;
 }

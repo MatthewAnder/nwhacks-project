@@ -1,9 +1,9 @@
 import { Button } from "@chakra-ui/react"
 import Title from "../components/Title"
-import Paragraph from "../components/Paragraph"
 import Feature from "../components/Feature"
-import { Input } from '@chakra-ui/react'
-
+import logo from '../assets/pickup.png';
+import Navbar from "../components/Navbar";
+import HomePageCards from "../components/HomePageCards";
   
 
 function Home(){
@@ -11,16 +11,17 @@ function Home(){
     return(
         <>
             <div>
-                <a href="/map" id="map">
-                    <Title title = "Pickup.."/>
-                    <Paragraph paragraph = "Find the best time and place for your sports!"/>
-                    <div class="gallery">
-                        <Feature title="Point1" paragraph="Explanation"/>
-                        <Feature title="Point2" paragraph="Explanation"/>
-                        <Feature title="Point3" paragraph="Explanation"/>
-                    </div>
-                    <Button size='lg'>Button</Button>
-                </a>
+                <Navbar/>
+            </div>
+            <div>
+                <img class="img" src={logo} alt="Logo" />
+                <Title title = "Find the best time and place for your sports!" class = "titled"/>
+                <div class="gallery">
+                    
+                </div>
+            </div>
+            <div>
+                <HomePageCards/>
             </div>
         </>
     )

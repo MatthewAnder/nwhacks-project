@@ -13,11 +13,6 @@ import {
   FormLabel,
 } from "@chakra-ui/react";
 
-// import SportDropDown from "./SportDropDown";
-// import TimeInput from "./TimeInput";
-// import CapacityInput from "./CapacityInput";
-// import Location from "./Location";
-
 import { useState } from "react";
 
 import { useForm } from "react-hook-form";
@@ -47,12 +42,6 @@ const PopoverForm = () => {
     formState: { errors },
   } = useForm();
 
-  const [formData, setFormData] = useState({
-    sport: "",
-    time: "",
-    capacity: 0,
-    location: "",
-  });
 
   const onSubmit = (data) => {
     console.log(data);

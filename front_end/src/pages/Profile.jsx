@@ -9,7 +9,7 @@ function Profile(){
         <header>
           <div class="page header">
             <Navbar/>
-            <img src={"../assets/pickup..png"} alt="Logo"></img>
+            <img src={"../assets/pickup.png"} alt="Logo"></img>
           </div>
         </header>
         <body>

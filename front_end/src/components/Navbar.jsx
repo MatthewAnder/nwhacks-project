@@ -11,8 +11,8 @@ function Navbar(){
                     <Button>Map</Button>
                 </a>
                 <PopUp id="popUpNav"/>
-                <a href="/Profile" id="profileNav">
-                    <Button>Profile</Button>
+                <a href="/" id="profileNav">
+                    <Button>Home</Button>
                 </a>
             </div>
             <p></p>
