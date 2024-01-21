@@ -92,24 +92,26 @@ function Map() {
                 animation={google.maps.Animation.DROP}
               />
 
-              
+              {/* {(mapData.location == values.location) ?
+              mapData.listOfEvents.push(values) :
+              "hi"} */}
+
+              {/* Drawer */}
+              <Drawer onClose={onClose} isOpen={isOpen} size="lg">
+                <DrawerOverlay />
+                <DrawerContent>
+                  <DrawerCloseButton />
+                  <DrawerHeader>Events</DrawerHeader>
+                  <DrawerBody>
+                    {mapData.listOfEvents.map((event) => {
+                      return <CardExample value={event} />;
+                    })}
+                  </DrawerBody>
+                </DrawerContent>
+              </Drawer>
             </>
           );
         })}
-
-        {/* Drawer */}
-        <Drawer onClose={onClose} isOpen={isOpen} size="lg">
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerCloseButton />
-          <DrawerHeader>Events</DrawerHeader>
-          <DrawerBody>
-            {mapDatas.map((event) => {
-              <CardExample value={event.listOfEvents} />;
-            })}
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
       </>
     </GoogleMap>
   ) : (
@@ -136,6 +138,8 @@ const CardExample = ({ value }) => {
           </Text>
           <Text color="teal.400">
             Time: {value.time}
+            <br></br>
+            Location: {value.location}
             <br></br>
             Capacity: 0 / {value.capacity}
           </Text>

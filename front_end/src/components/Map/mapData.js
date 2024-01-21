@@ -19,7 +19,7 @@ export const mapDatas = [
     name: 'North Outdoor Court',
     imageSrc: soccerMarker,
     listOfEvents: [
-      {sport: 'tennis', time: '23', capacity: '12', location: 'Student Rec Centre'},
+      {sport: 'tennis', time: '23', capacity: '12', location: 'North Outdoor Court'},
     ],
     location: {
       lat: 49.26097002952596,
