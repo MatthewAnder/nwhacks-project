@@ -1,6 +1,7 @@
 import { Button } from "@chakra-ui/react"
 import Title from "../components/Title"
 import Feature from "../components/Feature"
+import logo from '../assets/pickup.png';
   
 
 function Home(){
@@ -8,7 +9,7 @@ function Home(){
     return(
         <>
             <div>
-                <Title title = "Pickup.." class = "largeTitled"/>
+                <img class="img" src={logo} alt="Logo" />
                 <Title title = "Find the best time and place for your sports!" class = "titled"/>
                 <div class="gallery">
                     <Feature title="Schedule Events" paragraph="Schedule and host sports games to be able to play anytime and anywhere!" color="grey"/>
