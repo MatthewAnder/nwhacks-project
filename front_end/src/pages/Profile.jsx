@@ -15,7 +15,7 @@ function Profile(){
         <body>
           <div className="page">
             <div class="halfCenter">
-              <h2>
+              <h2 class = "margin">
                 Set Default
               </h2>
               <SportDropDown/>

@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import Profile from './pages/Profile.jsx'
-import Login from './pages/Login.jsx'
+import Home from './pages/Home.jsx'
 import './index.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import {
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <ChakraProvider>
-      <Login/>
+      <Home/>
     </ChakraProvider>,
   },
 ]);
