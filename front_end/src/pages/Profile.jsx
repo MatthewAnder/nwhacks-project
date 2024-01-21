@@ -1,7 +1,4 @@
 import Navbar from '../components/Navbar'
-import SportDropDown from '../components/PopUpForm/SportDropDown'
-import TimeInput from '../components/PopUpForm/TimeInput'
-import CapacityInput from '../components/PopUpForm/CapacityInput'
 
 function Profile(){
     return(
@@ -18,9 +15,7 @@ function Profile(){
               <h2 class = "margin">
                 Set Default
               </h2>
-              <SportDropDown/>
-              <TimeInput/>
-              <CapacityInput/>
+              
             </div>
           </div>
         </body>

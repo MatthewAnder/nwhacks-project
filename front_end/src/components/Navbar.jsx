@@ -1,6 +1,6 @@
 import { Button, Link } from "@chakra-ui/react"
 import PopUp from "./PopUpForm/PopUp"
-import logo from "../assets/pickup..png"
+import logo from "../assets/pickup.png"
 
 
 function Navbar(){
