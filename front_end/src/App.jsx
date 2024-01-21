@@ -4,16 +4,14 @@ import SportDropDown from './components/SportDropDown.jsx'
 import TimeInput from './components/TimeInput'
 import CapacityInput from './components/CapacityInput'
 import PopUp from './components/PopUp'
-
-import Map from './components/Map'
+import Navbar from './components/Navbar'
 
 function App() {
 
   return (
     <>
-      <Map />
       <div class="form">
-        <PopUp/>
+        <Navbar/>
       </div>
     </>
   )
