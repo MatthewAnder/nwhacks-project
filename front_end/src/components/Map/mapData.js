@@ -8,7 +8,7 @@ export const mapDatas = [
     name: 'Totem Park Basketball Court',
     imageSrc: basketballMarker,
     listOfEvents: [
-      {sport: 'tennis', time: '23', capacity: '12', location: 'Student Rec Centre'},
+      {sport: 'tennis', time: '23', capacity: '6', location: 'Totem Park Basketball Court'},
     ],
     location: {
       lat: 49.25800113260783,
@@ -19,7 +19,7 @@ export const mapDatas = [
     name: 'North Outdoor Court',
     imageSrc: soccerMarker,
     listOfEvents: [
-      {sport: 'tennis', time: '23', capacity: '12', location: 'North Outdoor Court'},
+      {sport: 'tennis', time: '23', capacity: '14', location: 'North Outdoor Court'},
     ],
     location: {
       lat: 49.26097002952596,
@@ -30,7 +30,7 @@ export const mapDatas = [
     name: 'Tennis Centre',
     imageSrc: tennisMarker,
     listOfEvents: [
-      {sport: 'tennis', time: '23', capacity: '12', location: 'Student Rec Centre'},
+      {sport: 'tennis', time: '23', capacity: '4', location: 'Tennis Centre'},
     ],
     location: {
       lat: 49.2598589949036,
@@ -41,7 +41,7 @@ export const mapDatas = [
     name: 'Thunderbird Park',
     imageSrc: tennisMarker,
     listOfEvents: [
-      {sport: 'tennis', time: '23', capacity: '12', location: 'Student Rec Centre'},
+      {sport: 'tennis', time: '23', capacity: '4', location: 'Thunderbird Park'},
     ],
     location: {
       lat: 49.25791600718387,
@@ -63,7 +63,7 @@ export const mapDatas = [
     name: 'Totem Park Tennis Court',
     imageSrc: tennisMarker,
     listOfEvents: [
-      {sport: 'tennis', time: '23', capacity: '12', location: 'Student Rec Centre'},
+      {sport: 'tennis', time: '23', capacity: '4', location: 'Totem Park Tennis Court'},
     ],
     location: {
       lat: 49.25799578873962,
