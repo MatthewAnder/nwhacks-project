@@ -1,7 +1,7 @@
 import React from 'react'
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
-
+import { mapStyle } from './mapTheme.js';
 
 const containerStyle = {
   width: '100vw',
@@ -16,7 +16,10 @@ const center = {
 function Map() {
   const { isLoaded } = useJsApiLoader({
     id: 'b7404d74019955c3',
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
+    mapTypeControl: false,
+    fullscreenControl: false,
+    streetViewControl: false
   })
 
   const [map, setMap] = React.useState(null)
@@ -40,25 +43,14 @@ function Map() {
         zoom={5}
         onLoad={onLoad}
         onUnmount={onUnmount}
+        options={{ disableDefaultUI: true, mapTypeId: "terrain", styles: mapStyle }}
       >
         { /* Child components, such as markers, info windows, etc. */ }
         <>
-          
+          <Marker position={{ lat: 49.257, lng: -123.251 }} />
         </>
       </GoogleMap>
   ) : <></>
-}
-
-const Markers = () => {
-  const marker = new google.maps.Marker({
-    position: features[i].position,
-    icon: icons[features[i].type].icon,
-    map: map,
-  });
-
-  return (
-    {marker}
-  )
 }
 
 

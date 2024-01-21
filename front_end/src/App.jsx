@@ -5,7 +5,7 @@ import TimeInput from './components/TimeInput'
 import CapacityInput from './components/CapacityInput'
 import PopUp from './components/PopUp'
 
-import Map from './components/Map'
+import Map from './components/Map/Map.jsx'
 
 function App() {
 
