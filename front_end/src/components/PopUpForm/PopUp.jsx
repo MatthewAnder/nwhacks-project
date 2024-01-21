@@ -13,10 +13,11 @@ import {
   FormLabel,
 } from "@chakra-ui/react";
 
-import { useState } from "react";
+import { useEffect, useState, useContext } from "react";
 
 import { useForm } from "react-hook-form";
 
+import { valueContext } from '../context'
 function PopUp() {
   return (
     <Popover>
@@ -40,12 +41,25 @@ const PopoverForm = () => {
     register,
     handleSubmit,
     formState: { errors },
+    watch
   } = useForm();
+
+  const {setValues} = useContext(valueContext);
 
 
   const onSubmit = (data) => {
     console.log(data);
   };
+
+  const sport = watch('sport');
+  const time = watch('time');
+
+  useEffect(() => {
+    setValues(values => ({...values, sport}))
+  }, [sport])
+  useEffect(() => {
+    setValues(values => ({...values, time}))
+  }, [time])
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
