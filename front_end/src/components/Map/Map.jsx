@@ -77,7 +77,7 @@ function Map() {
             onCloseClick={() => setSelectedMarker(null)}
           >
             <div>
-              <h2>{selectedMarker.title}</h2>
+              <h2>{selectedMarker.name}</h2>
               <p>{selectedMarker.description}</p>
             </div>
           </InfoWindow>
