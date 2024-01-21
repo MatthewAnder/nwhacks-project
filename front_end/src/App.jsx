@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <Map />
-      <div class="form">
+      <div className="form">
         <Navbar/>
       </div>
     </>
