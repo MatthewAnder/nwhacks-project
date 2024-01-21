@@ -14,7 +14,7 @@ export const mapDatas = [
   },
   {
     name: 'North Outdoor Court',
-    imageSrc: soccerMarker,
+    imageSrc: basketballMarker,
     location: {
       lat: 49.26097002952596, 
       lng: -123.24407261083188,
@@ -30,7 +30,7 @@ export const mapDatas = [
   },
   {
     name: 'Thunderbird Park',
-    imageSrc: tennisMarker,
+    imageSrc: soccerMarker,
     location: {
       lat: 49.25791600718387, 
       lng: -123.24248214727845,

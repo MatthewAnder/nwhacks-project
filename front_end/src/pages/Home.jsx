@@ -7,7 +7,7 @@ function Home(){
 
     return(
         <>
-            <div>
+            <div className="homepage">
                 <Title title = "Pickup.." class = "largeTitled"/>
                 <Title title = "Find the best time and place for your sports!" class = "titled"/>
                 <div class="gallery">

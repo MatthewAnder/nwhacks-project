@@ -54,6 +54,10 @@
   display: inline-block;
 }
 
+.homepage {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .largeTitled {
   font-size: 100px;
 }
@@ -77,4 +81,5 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding-bottom: 50px;
+  border-radius: 15px;
 }
